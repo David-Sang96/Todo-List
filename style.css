@@ -1,0 +1,123 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  font-size: 62.5%;
+}
+.container {
+  background-color: #f4f4f4;
+  /* width: min(95vw, 60rem); */
+  max-width: 60rem;
+  margin: 3rem auto 0;
+  padding: 1rem;
+  user-select: none;
+}
+form {
+  text-align: center;
+}
+input[type="text"] {
+  width: 55%;
+  padding: 0.5rem;
+  font-size: 1.7rem;
+  outline: none;
+}
+input[type="text"]:focus {
+  border: 1px solid #87ceeb;
+}
+input[type="submit"] {
+  padding: 0.6rem 1.5rem;
+  margin-left: .5rem;
+  cursor: pointer;
+  font-size: clamp(1.2rem,2vw,1.4rem);
+}
+.list-items {
+  width: 70%;
+  margin: 0 auto;
+}
+.list-box {
+  display: flex;
+  justify-content: space-between;
+  background: #e4bda5;
+  padding: 0.5rem;
+  margin: 1rem;
+  transition: all .8s ease;
+}
+li {
+  font-size: clamp(1.7rem, 2.5vw, 2rem);
+  list-style: none;
+  align-self: center;
+  flex: 1;
+  text-align: left;
+}
+.check {
+  font-size: 2rem;
+  cursor: pointer;
+  padding: 0.2rem;
+}
+.trash {
+  font-size: 1.8rem;
+  cursor: pointer;
+  padding: 0.3rem;
+}
+.cross {
+  text-decoration: line-through;
+  opacity: .5;
+}
+.delete{
+  transform: translateY(8rem) rotateZ(20deg);
+  opacity: 0;
+}
+select{
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: none;
+  font-size: clamp(1.2rem,2vw,1.4rem);
+}
+.select {
+  display: inline-block;
+  position: relative;
+}
+#todo{
+  padding-block: .7rem;
+  padding-right:2rem ;
+  padding-left: .5rem;
+  margin-left: .5rem;
+  outline: none;
+  cursor: pointer;
+}
+.select::after{
+  content: "\25BC";
+  position: absolute;
+  font-size: 1.6rem;
+  top: 24%;
+  right: 5%;
+  pointer-events: none;
+}
+
+@media (max-width:500px) {
+  #text{
+    width: 100%;
+  }
+  #submit{
+    width: 30%;
+    font-size: 1.5rem;
+  }
+  #todo{
+   padding-left:1.5rem;
+   padding-right: 2rem;
+   margin-top: 1rem;
+   font-size: 1.5rem;
+  }
+  .select::after{
+    font-size: 1.6rem;
+    top: 43%;
+    right: 10%;
+  }
+  .list-items{
+    width: 100%;
+  }
+}
